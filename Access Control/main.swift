@@ -9,6 +9,7 @@ import Foundation
 
 print("Hello, World!")
 
+
 //MARK: Синтаксис контроля доступа
 print("\n//Синтаксис контроля доступа")
 
@@ -25,3 +26,28 @@ private func somePrivateFunction() {}
 class SomeInternalClass1 {}              // неявно internal
 let someInternalConstant1 = 0            // неявно internal
 
+
+//MARK: Пользовательские типы
+print("\n//Пользовательские типы")
+
+public class SomePublicClass2 {                  // явный public класс
+    public var somePublicProperty = 0            // явный public член класса
+    var someInternalProperty = 0                 // неявный internal член класса
+    fileprivate func someFilePrivateMethod() {}  // явный file-private член класса
+    private func somePrivateMethod() {}          // явный private член класса
+}
+ 
+class SomeInternalClass2 {                       // неявный internal класс
+    var someInternalProperty = 0                 // неявный internal член класса
+    fileprivate func someFilePrivateMethod() {}  // явный file-private член класса
+    private func somePrivateMethod() {}          // явный private член класса
+}
+ 
+fileprivate class SomeFilePrivateClass2 {        // явный file-private класс
+    func someFilePrivateMethod() {}              // неявный file-private член класса
+    private func somePrivateMethod() {}          // явный private член класса
+}
+ 
+private class SomePrivateClass2 {                // явный private класс
+    func somePrivateMethod() {}                  // неявный private член класса
+}
