@@ -60,3 +60,13 @@ print("\n//Типы функций")
 //    // реализация функции…
 //}
 
+
+//MARK: Типы перечислений
+print("\n//Типы перечислений")
+
+public enum CompassPoint {
+    case north
+    case south
+    case east
+    case west
+}
