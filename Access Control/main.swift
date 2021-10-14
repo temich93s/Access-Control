@@ -51,3 +51,12 @@ fileprivate class SomeFilePrivateClass2 {        // явный file-private кл
 private class SomePrivateClass2 {                // явный private класс
     func somePrivateMethod() {}                  // неявный private член класса
 }
+
+
+//MARK: Типы функций
+print("\n//Типы функций")
+
+//private func someFunction() -> (SomeInternalClass, SomePrivateClass) {
+//    // реализация функции…
+//}
+
