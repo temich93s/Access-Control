@@ -70,3 +70,17 @@ public enum CompassPoint {
     case east
     case west
 }
+
+
+//MARK: Уровень доступа класса и подкласса
+print("\n//Уровень доступа класса и подкласса")
+
+public class A {
+    fileprivate func someMethod() {}
+}
+ 
+internal class B: A {
+    override internal func someMethod() {
+        super.someMethod()
+    }
+}
