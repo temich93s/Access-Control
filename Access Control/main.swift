@@ -84,3 +84,41 @@ internal class B: A {
         super.someMethod()
     }
 }
+
+
+//MARK: Геттеры и сеттеры
+print("\n//Геттеры и сеттеры")
+
+struct TrackedString {
+    private(set) var numberOfEdits = 0
+    var value: String = "" {
+        didSet {
+            numberOfEdits += 1
+        }
+    }
+}
+
+var stringToEdit = TrackedString()
+stringToEdit.value = "This string will be tracked."
+stringToEdit.value += " This edit will increment numberOfEdits."
+stringToEdit.value += " So will this one."
+print("Количество изменений равно \(stringToEdit.numberOfEdits)")
+// Выведет "Количество изменений равно 3"
+
+public struct TrackedString1 {
+    public private(set) var numberOfEdits = 0
+    public var value: String = "" {
+        didSet {
+            numberOfEdits += 1
+        }
+    }
+    public init() {}
+}
+
+var stringToEdit1 = TrackedString1()
+stringToEdit1.value = "This string will be tracked."
+stringToEdit1.value += " This edit will increment numberOfEdits."
+stringToEdit1.value += " So will this one."
+print("Количество изменений равно \(stringToEdit1.numberOfEdits)")
+// Выведет "Количество изменений равно 3"
+
