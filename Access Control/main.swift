@@ -122,3 +122,23 @@ stringToEdit1.value += " So will this one."
 print("Количество изменений равно \(stringToEdit1.numberOfEdits)")
 // Выведет "Количество изменений равно 3"
 
+
+//MARK: Расширения и уровни доступа
+print("\n//Расширения и уровни доступа")
+
+protocol SomeProtocol {
+    func doSomething()
+}
+
+struct SomeStruct {
+    private var privateVariable = 12
+}
+
+extension SomeStruct: SomeProtocol {
+    func doSomething() {
+        print(privateVariable)
+    }
+}
+
+let a = SomeStruct()
+a.doSomething()
